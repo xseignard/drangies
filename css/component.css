@@ -219,23 +219,6 @@ div.bl-panel-items > div > div {
 	margin: 0 0 20px 0;
 }
 
-.bl-content article {
-	padding: 20px 40px 20px 0px;
-}
-
-.bl-content article h3 {
-	font-weight: 700;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	margin: 0 0 10px 0;
-	padding-top: 20px;
-	font-size: 1.4em;
-}
-
-.bl-content article a {
-	color: rgba(0,0,0,0.2);
-}
-
 .bl-content > ul {
 	list-style: none;
 	padding: 0;
@@ -489,6 +472,9 @@ section.bl-expand .bl-icon-close {
 /* about style */
 .bl-picture, .bl-description {
 	display: inline-block;
+}
+.bl-picture {
+	max-width: 100%;
 }
 
 @media screen and (max-width: 46.5em) {
