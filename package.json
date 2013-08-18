@@ -12,6 +12,9 @@
     "url": "https://github.com/xseignard/drangies/issues"
   },
   "devDependencies": {
-    "express": "~3.3.5"
+    "express": "~3.3.5",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-jshint": "~0.6.3"
   }
 }

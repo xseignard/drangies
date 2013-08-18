@@ -10,7 +10,7 @@
 		<meta name="author" content="Xavier Seignard" />
 		<link rel="shortcut icon" href="favicon.ico"> 
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
+		<script src="bower_components/modernizr/modernizr.js"></script>
 		<script src="http://localhost:35729/livereload.js"></script>
 	</head>
 	<body>
@@ -18,50 +18,62 @@
 			<div id="bl-main" class="bl-main">
 				<section>
 					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-about">Hello, I'm Xavier</h2>
+						<h2 class="bl-icon bl-icon-smiley">Hello, I'm Xavier</h2>
 					</div>
 					<div class="bl-content">
-						<h2>Hello, I'm Xavier</h2>
-						<p>
-							Blablabla
-						</p>
+						<img class="bl-picture" src="images/me.jpg" />
+						<div class="bl-description">
+							<h2>Hello, I'm Xavier</h2>
+							<p>
+								Developper and tinkerer, I'm commited to the values ​​of the free software culture, knowledge sharing and DIY spirit.
+								<br/>
+								The soldering iron, the keyboard and the glue gun are my favorite tools!
+							</p>
+							<p>
+								<a class="bl-icon bl-icon-twitter social" href="http://twitter.com/xavier_seignard" target="_blank"></a>
+								<a class="bl-icon bl-icon-github social" href="http://github.com/xseignard" target="_blank"></a>
+								<a class="bl-icon bl-icon-linkedin social" href="http://linkedin.com/in/xavierseignard" target="_blank"></a>
+							</p>
+						</div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
 				<section id="bl-work-section">
 					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-works">I create stuff</h2>
+						<h2 class="bl-icon bl-icon-rocket">I make stuff</h2>
 					</div>
 					<div class="bl-content">
-						<h2>I create stuff</h2>
+						<h2>I make stuff</h2>
 						<p>Blablabla.</p>
 						<ul id="bl-work-items">
 							<li data-panel="panel-1">
-								<a href="#"><img src="images/leap.jpg" /></a>
+								<a class="caption" data-title="Leaplamp" data-description="Leap motion, Node.js and Arduino" href="#">
+									<img src="images/leap.jpg" />
+								</a>
 							</li>
 							<li data-panel="panel-2">
-								<a href="#"><img src="images/taxiphone.jpg" /></a>
+								<a class="caption" data-title="Taxiphone" data-description="Immigration, Arduino and MIDI" href="#">
+									<img src="images/taxiphone.jpg" />
+								</a>
 							</li>
 							<li data-panel="panel-3">
-								<a href="#"><img src="images/minitel.jpg" /></a>
+								<a class="caption" data-title="Minitel 2.0" data-description="Electronics, Raspberry Pi and Obsolescence" href="#">
+									<img src="images/minitel.jpg" />
+								</a>
 							</li>
 						</ul>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
 				<section data-noop="true">
-					<div class="bl-box">
-						<a href="http://xseignard.github.io/" target="_blank">
-							<h2 class="bl-icon bl-icon-blog">I write about stuff</h2>
-						</a>
-					</div>
+					<a class="bl-box" href="http://xseignard.github.io/" target="_blank">
+						<h2 class="bl-icon bl-icon-pen">I write about stuff</h2>
+					</a>
 				</section>
 				<section data-noop="true">
-					<div class="bl-box">
-						<a href="mailto:xavier.seignard+drangies@gmail.com?subject=Freelance request">
-							<h2 class="bl-icon bl-icon-contact">Hire me!</h2>
-						</a>
-					</div>
+					<a class="bl-box" href="mailto:xavier.seignard+drangies@gmail.com?subject=Freelance request">
+						<h2 class="bl-icon bl-icon-mail">Hire me!</h2>
+					</a>
 				</section>
 				<!-- Panel items for the works -->
 				<div class="bl-panel-items" id="bl-panel-work-items">
