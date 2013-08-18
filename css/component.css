@@ -276,6 +276,11 @@ div.bl-panel-items > div > div img {
 	margin: 0 20px 20px 0;
 	max-width: 100%;
 }
+div.bl-panel-items > div > div iframe {
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
 
 div.bl-panel-items {
 	top: 100%;
