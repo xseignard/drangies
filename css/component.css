@@ -479,6 +479,8 @@ section.bl-expand .bl-icon-close {
 	display: inline-block;
 }
 .bl-picture {
+	float: left;
+	margin: 0 20px 20px 0;
 	max-width: 100%;
 }
 
