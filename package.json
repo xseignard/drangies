@@ -1,0 +1,17 @@
+{
+  "name": "drangies",
+  "version": "0.0.1",
+  "description": "my personal website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xseignard/drangies.git"
+  },
+  "author": "Xavier Seignard <xavier.seignard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xseignard/drangies/issues"
+  },
+  "devDependencies": {
+    "express": "~3.3.5"
+  }
+}
