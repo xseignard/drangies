@@ -45,5 +45,7 @@ module.exports = function(grunt) {
   // task loading
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  
+  // imagemin
+  // https://gist.github.com/cobyism/4730490
+  // http://www.dhar.fr/blog/2012/07/23/some-fun-with-git-hooks-and-grunt-dot-js/
 };
