@@ -4,7 +4,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     // some metadata
-    distDir: 'dist',
     meta: {
       // banner that wil be used in files
       banner:
@@ -16,23 +15,32 @@ module.exports = function(grunt) {
       ' * Licensed <%= pkg.license %>\n' +
       ' */\n'
     },
-
     // sources definition
     src: {
       js: 'src/js/*.js', 
       index: 'src/index.html',
-      assets : {
-        css: 'src/assets/css/',
-        images: 'src/assets/images/',
-        fonts: 'src/assets/fonts/'
-      }
+      assets : 'src/assets',
+      css: '<%= src.assets %>/css/',
+      images: '<%= src.assets %>/images/',
+      fonts: '<%= src.assets %>/fonts/'
+    },
+    // dist folder definition
+    distDir: {
+      path: 'dist',
+      tmp: '<%= distDir.path %>/tmp',
+      assets: '<%= distDir.path %>/assets',
+      vendor: '<%= distDir.assets %>/vendor',
+      fonts: '<%= distDir.assets %>/fonts',
+      images: '<%= distDir.assets %>/images',
+      css: '<%= distDir.assets %>/css',
+
     },
     // delete files and folders
     clean: {
       // delete dist folder and reports one
-      defaults: ['<%= distDir %>'],
+      defaults: ['<%= distDir.path %>'],
       // delete artifacts produced during build
-      postBuild: ['<%= distDir %>/tmp']
+      postBuild: ['<%= distDir.path %>/tmp']
     },
     // concat js files of our app
     concat: {
@@ -41,7 +49,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['<%= src.js %>'],
-        dest: '<%= distDir %>/assets/<%= pkg.name %>.js'
+        dest: '<%= distDir.assets %>/<%= pkg.name %>.js'
       }
     },
     // minify the app and vendor libs
@@ -51,16 +59,16 @@ module.exports = function(grunt) {
           banner: '<%= meta.banner %>'
         },
         files: {
-          '<%= distDir %>/assets/<%= pkg.name %>.min.js': [ '<%= distDir %>/assets/<%= pkg.name %>.js' ]
+          '<%= distDir.assets %>/<%= pkg.name %>.min.js': [ '<%= distDir.assets %>/<%= pkg.name %>.js' ]
         }
       },
       vendor: {
         files: [
           {
             expand: true,
-            cwd: '<%= distDir %>/tmp/vendor',
+            cwd: '<%= distDir.tmp %>/vendor',
             src: ['*.js'],
-            dest: '<%= distDir %>/assets/vendor',
+            dest: '<%= distDir.vendor %>',
             ext: '.js'
          }
         ]
@@ -69,25 +77,39 @@ module.exports = function(grunt) {
     // copy assets
     copy: {
       fonts: {
-        files: [{src: ['**'], dest: '<%= distDir %>/assets/fonts', cwd: '<%= src.assets.fonts %>', expand: true}]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= src.fonts %>',
+            src: ['**'],
+            dest: '<%= distDir.fonts %>'
+          }
+        ]
       },
       cname: {
-        files: [{src: ['CNAME'], dest: '<%= distDir %>/', cwd: '.', expand: true}]
+        files: [
+          {
+            expand: true,
+            cwd: '.',
+            src: ['CNAME'],
+            dest: '<%= distDir.path %>/'            
+          }
+        ]
       }
     },
     // copy bower deps before they got minified
     bower: {
       dev: {
-        dest: '<%= distDir %>/tmp/vendor'
+        dest: '<%= distDir.tmp %>/vendor'
       }
     },
     // cssmin
     cssmin: {
       minify: {
         expand: true,
-        cwd: '<%= src.assets.css %>',
+        cwd: '<%= src.css %>',
         src: ['*.css'],
-        dest: '<%= distDir %>/assets/css',
+        dest: '<%= distDir.css %>',
         ext: '.css'
       }
     },
@@ -96,9 +118,9 @@ module.exports = function(grunt) {
       images: {
         files: [{
           expand: true,
-          cwd: '<%= src.assets.images %>',
+          cwd: '<%= src.images %>',
           src: ['*.{png,jpg,gif}'],
-          dest: '<%= distDir %>/assets/images'
+          dest: '<%= distDir.images %>'
         }]
       }
     },
@@ -114,7 +136,7 @@ module.exports = function(grunt) {
       // reload web page when a change occurs
       dist: {
         options: { livereload: true },
-        files: ['<%= distDir %>/**']
+        files: ['<%= distDir.path %>/**']
       },
       dev: {
         files: ['src/**'],
