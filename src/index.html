@@ -9,9 +9,10 @@
 		<meta name="keywords" content="xavier seignard, javascript, node.js, arduino, raspberry pi, freelance" />
 		<meta name="author" content="Xavier Seignard" />
 		<link rel="shortcut icon" href="favicon.ico"> 
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="bower_components/modernizr/modernizr.js"></script>
-		<script src="http://localhost:35729/livereload.js"></script>
+		<link rel="stylesheet" type="text/css" href="./assets/css/component.css" />
+		<% if (grunt.config.get('dev')) {%>
+  		<script src="http://localhost:35729/livereload.js"></script>
+  		<%}%>
 	</head>
 	<body>
 		<div class="container">	
@@ -21,7 +22,7 @@
 						<h2 class="bl-icon bl-icon-smiley">Hello, I'm Xavier</h2>
 					</div>
 					<div class="bl-content">
-						<img class="bl-picture" src="images/me.jpg" />
+						<img class="bl-picture" src="./assets/images/me.jpg" />
 						<div class="bl-description">
 							<h2>Hello, I'm Xavier</h2>
 							<p>
@@ -48,17 +49,17 @@
 						<ul id="bl-work-items">
 							<li data-panel="panel-1">
 								<a class="caption" data-title="Leaplamp" data-description="Leap motion, Node.js and Arduino" href="#">
-									<img src="images/leap.jpg" />
+									<img src="./assets/images/leap.jpg" />
 								</a>
 							</li>
 							<li data-panel="panel-2">
 								<a class="caption" data-title="Taxiphone" data-description="Immigration, Arduino and MIDI" href="#">
-									<img src="images/taxiphone.jpg" />
+									<img src="./assets/images/taxiphone.jpg" />
 								</a>
 							</li>
 							<li data-panel="panel-3">
 								<a class="caption" data-title="Minitel 2.0" data-description="Electronics, Raspberry Pi and Obsolescence" href="#">
-									<img src="images/minitel.jpg" />
+									<img src="./assets/images/minitel.jpg" />
 								</a>
 							</li>
 						</ul>
@@ -79,11 +80,13 @@
 				<div class="bl-panel-items" id="bl-panel-work-items">
 					<div data-panel="panel-1">
 						<div>
-							<img src="images/leap.jpg" />
+							<img src="./assets/images/leap.jpg" />
 							<h3>Leaplamp</h3>
 							<p>
 							The idea behind this work was to explore how to interface Arduino with Leapmotion, and to see what would be the precision we could get with some basic servos.<br/>
 							Since there is no lib to directly connect the Leapmotion to the Arduino, I used node.js to connect to the websocket server that streams the Leapmotion data and the johnny-five node.js lib to control the Arduino and the servos.<br/>
+							</p>
+							<p>
 							More info here: <a href="http://xseignard.github.io/2013/06/25/interfacing-leap-motion-with-arduino-thanks-to-nodejs/" target="_blank">Interfacing Leap Motion with Arduino thanks to Node.js</a>
 							</p>
 							<p>
@@ -93,14 +96,14 @@
 					</div>
 					<div data-panel="panel-2">
 						<div>
-							<img src="images/taxiphone.jpg" />
+							<img src="./assets/images/taxiphone.jpg" />
 							<h3>Taxiphone</h3>
 							<p>Blablabla.</p>
 						</div>
 					</div>
 					<div data-panel="panel-3">
 						<div>
-							<img src="images/minitel.jpg" />
+							<img src="./assets/images/minitel.jpg" />
 							<h3>Minitel 2.0</h3>
 							<p>Blablabla.</p>
 						</div>
@@ -112,8 +115,15 @@
 				</div>
 			</div>
 		</div><!-- /container -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/boxlayout.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  		<script>window.jQuery || document.write('<script src="./assets/vendor/jquery.js">\x3C/script>')</script>
+		<script src="./assets/vendor/modernizr.js"></script>
+		<% if (grunt.config.get('dev')) {%>
+    		<script src="./assets/drangies.js"></script>
+  		<%}%>
+  		<% if (grunt.config.get('prod')) {%>
+    		<script src="./assets/drangies.min.js"></script>
+  		<%}%>
 		<script>
 			$(function() {
 				Boxlayout.init();
