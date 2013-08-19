@@ -21,8 +21,11 @@ module.exports = function(grunt) {
     src: {
       js: 'src/js/*.js', 
       index: 'src/index.html',
-      css: 'src/assets/css/*.css',
-      fonts: 'src/assets/fonts/*.*'
+      assets : {
+        css: 'src/assets/css/',
+        images: 'src/assets/images/',
+        fonts: 'src/assets/fonts/'
+      }
     },
     // delete files and folders
     clean: {
@@ -65,17 +68,14 @@ module.exports = function(grunt) {
     },
     // copy assets
     copy: {
-      images: {
-        files: [{src: ['**'], dest: '<%= distDir %>/assets/images', cwd: 'src/assets/images', expand: true}]
-      },
       fonts: {
-        files: [{src: ['**'], dest: '<%= distDir %>/assets/fonts', cwd: 'src/assets/fonts', expand: true}]
+        files: [{src: ['**'], dest: '<%= distDir %>/assets/fonts', cwd: '<%= src.assets.fonts %>', expand: true}]
       },
       cname: {
         files: [{src: ['CNAME'], dest: '<%= distDir %>/', cwd: '.', expand: true}]
       }
     },
-    // copy bower deps
+    // copy bower deps before they got minified
     bower: {
       dev: {
         dest: '<%= distDir %>/tmp/vendor'
@@ -85,10 +85,21 @@ module.exports = function(grunt) {
     cssmin: {
       minify: {
         expand: true,
-        cwd: 'src/assets/css',
+        cwd: '<%= src.assets.css %>',
         src: ['*.css'],
         dest: '<%= distDir %>/assets/css',
         ext: '.css'
+      }
+    },
+    // imagemin
+    imagemin: {
+      images: {
+        files: [{
+          expand: true,
+          cwd: '<%= src.assets.images %>',
+          src: ['*.{png,jpg,gif}'],
+          dest: '<%= distDir %>/assets/images'
+        }]
       }
     },
     // js linting
@@ -122,7 +133,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  // imagemin
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+
   // https://gist.github.com/cobyism/4730490
   // http://www.dhar.fr/blog/2012/07/23/some-fun-with-git-hooks-and-grunt-dot-js/
   
@@ -142,7 +154,7 @@ module.exports = function(grunt) {
   });
 
   // build
-  grunt.registerTask('build', ['clean:defaults', 'jshint', 'concat', 'copy', 'bower', 'uglify', 'cssmin', 'index', 'clean:postBuild']);
+  grunt.registerTask('build', ['clean:defaults', 'jshint', 'concat', 'copy', 'bower', 'uglify', 'cssmin', 'imagemin', 'index', 'clean:postBuild']);
   // dev build
   grunt.registerTask('dev-build', ['devFlag', 'build']);
   // prod build
