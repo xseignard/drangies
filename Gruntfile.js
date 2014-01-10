@@ -101,7 +101,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'bower_components/fancybox/source',
-            src: ['jquery.fancybox.css', 'fancybox_overlay.png', 'fancybox_sprite.png', 'fancybox_loading.gif', 'blank.gif'],
+            src: ['jquery.fancybox.css', 'fancybox_overlay.png', 'fancybox_sprite.png', 'fancybox_loading.gif', 'blank.gif', 'helpers/jquery.fancybox-media.js'],
             dest: '<%= distDir.vendor %>'            
           }
         ]
