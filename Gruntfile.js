@@ -95,6 +95,16 @@ module.exports = function(grunt) {
             dest: '<%= distDir.path %>/'            
           }
         ]
+      },
+      fancyBoxCss: {
+        files: [
+          {
+            expand: true,
+            cwd: 'bower_components/fancybox/source',
+            src: ['jquery.fancybox.css', 'fancybox_overlay.png', 'fancybox_sprite.png', 'fancybox_loading.gif', 'blank.gif'],
+            dest: '<%= distDir.vendor %>'            
+          }
+        ]
       }
     },
     // copy bower deps before they got minified
@@ -119,7 +129,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= src.images %>',
-          src: ['*.{png,jpg,gif}'],
+          src: ['**/*.{png,jpg,gif}'],
           dest: '<%= distDir.images %>'
         }]
       }

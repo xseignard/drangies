@@ -1,8 +1,8 @@
 /**
- * drangies - v0.0.1 - 2013-08-19
+ * drangies - v0.0.1 - 2014-01-10
  * http://drangies.fr
  *
- * Copyright (c) 2013 Xavier Seignard <xavier.seignard@gmail.com>
+ * Copyright (c) 2014 Xavier Seignard <xavier.seignard@gmail.com>
  * Licensed MIT
  */
 /**
@@ -146,3 +146,6 @@ var Boxlayout = (function() {
 	return { init : init };
 
 })();
+$(document).ready(function() {
+	$('.fancybox').fancybox();
+});

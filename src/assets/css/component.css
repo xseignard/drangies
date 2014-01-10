@@ -483,6 +483,9 @@ section.bl-expand .bl-icon-close {
 	margin: 0 20px 20px 0;
 	max-width: 100%;
 }
+.fancybox-overlay {
+	z-index: 10000!important;
+}
 
 @media screen and (max-width: 46.5em) {
 	.bl-content,

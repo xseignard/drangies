@@ -10,7 +10,10 @@
 		<meta name="author" content="Xavier Seignard" />
 		<link rel="shortcut icon" href="favicon.ico"> 
 		<link rel="stylesheet" type="text/css" href="./assets/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="./assets/vendor/jquery.fancybox.css" media="screen" />
 		
+  		<script src="http://localhost:35729/livereload.js"></script>
+  		
 	</head>
 	<body>
 		<div class="container">	
@@ -94,9 +97,31 @@
 					</div>
 					<div data-panel="panel-2">
 						<div>
-							<img src="./assets/images/taxiphone.jpg" />
 							<h3>Taxiphone</h3>
-							<p>Blablabla.</p>
+							<p>
+								"L'étrange taxiphone" is an interactive installation, made with the collective <a href="http://etrangemiroir.og">Etrange Miroir</a>, that questions the vision we have about immigrants. Relying on a scenography that represents a phone booth, the spectator compose a phone number and hears testimonials of migrants, speaking about how they are perceived by the society.
+							</p>
+							<p>
+								The rotary phones are Arduino controlled, and each composed phone number will be translated as a MIDI message and sent to Ableton Live to control the current played sound.
+							</p>
+							<p>
+								Source code is available here: <a href="https://github.com/xseignard/taxiphone">https://github.com/xseignard/taxiphone</a>
+							</p>
+							<a class="fancybox" rel="taxiphone" href="./assets/images/projects/taxiphone/taxiphone_1.jpg">
+								<img src="./assets/images/projects/taxiphone/taxiphone_1s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="taxiphone" href="./assets/images/projects/taxiphone/taxiphone_2.jpg">
+								<img src="./assets/images/projects/taxiphone/taxiphone_2s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="taxiphone" href="./assets/images/projects/taxiphone/taxiphone_3.jpg">
+								<img src="./assets/images/projects/taxiphone/taxiphone_3s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="taxiphone" href="./assets/images/projects/taxiphone/taxiphone_5.jpg">
+								<img src="./assets/images/projects/taxiphone/taxiphone_5s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="taxiphone" href="./assets/images/projects/taxiphone/taxiphone_4.jpg">
+								<img src="./assets/images/projects/taxiphone/taxiphone_4s.jpg" alt="" />
+							</a>
 						</div>
 					</div>
 					<div data-panel="panel-3">
@@ -116,9 +141,10 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   		<script>window.jQuery || document.write('<script src="./assets/vendor/jquery.js">\x3C/script>')</script>
 		<script src="./assets/vendor/modernizr.js"></script>
+		<script src="./assets/vendor/fancybox.js"></script>
 		
+    		<script src="./assets/drangies.js"></script>
   		
-    		<script src="./assets/drangies.min.js"></script>
   		
 		<script>
 			$(function() {
