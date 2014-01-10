@@ -12,6 +12,8 @@
 		<link rel="stylesheet" type="text/css" href="./assets/css/component.css" />
 		<link rel="stylesheet" type="text/css" href="./assets/vendor/jquery.fancybox.css" media="screen" />
 		
+  		<script src="http://localhost:35729/livereload.js"></script>
+  		
 	</head>
 	<body>
 		<div class="container">	
@@ -44,7 +46,7 @@
 					</div>
 					<div class="bl-content">
 						<h2>I make stuff</h2>
-						<p>Blablabla.</p>
+						<p>Here you can find some of my previous projects</p>
 						<ul id="bl-work-items">
 							<li data-panel="panel-1">
 								<a class="caption" data-title="Leaplamp" data-description="Leap motion, Node.js and Arduino" href="#">
@@ -79,31 +81,39 @@
 				<div class="bl-panel-items" id="bl-panel-work-items">
 					<div data-panel="panel-1">
 						<div>
-							<img src="./assets/images/leap.jpg" />
 							<h3>Leaplamp</h3>
 							<p>
 							The idea behind this work was to explore how to interface Arduino with Leapmotion, and to see what would be the precision we could get with some basic servos.<br/>
 							Since there is no lib to directly connect the Leapmotion to the Arduino, I used node.js to connect to the websocket server that streams the Leapmotion data and the johnny-five node.js lib to control the Arduino and the servos.<br/>
 							</p>
 							<p>
-							More info here: <a href="http://xseignard.github.io/2013/06/25/interfacing-leap-motion-with-arduino-thanks-to-nodejs/" target="_blank">Interfacing Leap Motion with Arduino thanks to Node.js</a>
+								This work has been featured on <a href="http://hackaday.com/2013/07/11/animating-a-lamp-with-the-leap-motion/" target="_blank">Hack a Day</a> and <a href="http://www.adafruit.com/blog/2013/07/11/leapmotion-controlled-lamp-with-arduino-and-node-js/" target="_blank">Adafruit blog</a>.
 							</p>
 							<p>
-							<iframe src="http://player.vimeo.com/video/68530396?title=0&amp;byline=0&amp;portrait=0&amp;color=10a296" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							More info here: <a href="http://xseignard.github.io/2013/06/25/interfacing-leap-motion-with-arduino-thanks-to-nodejs/" target="_blank">Interfacing Leap Motion with Arduino thanks to Node.js</a>
 							</p>
+							<a class="fancybox" rel="leaplamp" href="./assets/images/projects/leaplamp/leaplamp_1.jpg">
+								<img src="./assets/images/projects/leaplamp/leaplamp_1s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="leaplamp" href="./assets/images/projects/leaplamp/leaplamp_2.jpg">
+								<img src="./assets/images/projects/leaplamp/leaplamp_2s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="leaplamp" href="http://vimeo.com/68530396">
+								<img src="./assets/images/projects/leaplamp/leaplamp_3s.jpg" alt="" />
+							</a>
 						</div>
 					</div>
 					<div data-panel="panel-2">
 						<div>
 							<h3>Taxiphone</h3>
 							<p>
-								"L'étrange taxiphone" is an interactive installation, made with the collective <a href="http://etrangemiroir.og">Etrange Miroir</a>, that questions the vision we have about immigrants. Relying on a scenography that represents a phone booth, the spectator compose a phone number and hears testimonials of migrants, speaking about how they are perceived by the society.
+								"L'étrange taxiphone" is an interactive installation, made with the collective <a href="http://etrangemiroir.org" target="_blank">Etrange Miroir</a>, that questions the vision we have about immigrants. Relying on a scenography that represents a phone booth, the spectator compose a phone number and hears testimonials of migrants, speaking about how they are perceived by the society.
 							</p>
 							<p>
 								The rotary phones are Arduino controlled, and each composed phone number will be translated as a MIDI message and sent to Ableton Live to control the current played sound.
 							</p>
 							<p>
-								Source code is available here: <a href="https://github.com/xseignard/taxiphone">https://github.com/xseignard/taxiphone</a>
+								Source code is available here: <a href="https://github.com/xseignard/taxiphone" target="_blank">https://github.com/xseignard/taxiphone</a>
 							</p>
 							<a class="fancybox" rel="taxiphone" href="./assets/images/projects/taxiphone/taxiphone_1.jpg">
 								<img src="./assets/images/projects/taxiphone/taxiphone_1s.jpg" alt="" />
@@ -140,9 +150,10 @@
   		<script>window.jQuery || document.write('<script src="./assets/vendor/jquery.js">\x3C/script>')</script>
 		<script src="./assets/vendor/modernizr.js"></script>
 		<script src="./assets/vendor/fancybox.js"></script>
+		<script src="./assets/vendor/helpers/jquery.fancybox-media.js"></script>
 		
+    		<script src="./assets/drangies.js"></script>
   		
-    		<script src="./assets/drangies.min.js"></script>
   		
 		<script>
 			$(function() {
