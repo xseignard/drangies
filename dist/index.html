@@ -28,6 +28,10 @@
 								Developer and tinkerer, I'm commited to the values ​​of the free software culture, knowledge sharing and DIY spirit.
 								<br/>
 								The soldering iron, the keyboard and the glue gun are my favorite tools!
+								<br/>
+								I design and realize embedded systems for interactive installations.
+								<br/>
+								I also develop and provide guidance in the field of web development (Node.js, AngularJS, Industrialization of modern JavaScript, etc.)
 							</p>
 							<p>
 								<a class="bl-icon bl-icon-twitter social" href="http://twitter.com/xavier_seignard" target="_blank"></a>
@@ -46,7 +50,17 @@
 						<h2>I make stuff</h2>
 						<p>Here you can find some of my previous projects</p>
 						<ul id="bl-work-items">
-							<li data-panel="panel-1">
+							<li data-panel="panel-5">
+								<a class="caption" data-title="Mobiles Illégitimes" data-description="Documentary, Raspberry Pi and Node.js" href="#">
+									<img src="./assets/images/mobilesillegitimes.jpg" />
+								</a>
+							</li>
+							<li data-panel="panel-4">
+								<a class="caption" data-title="Coup de foudre" data-description="Tesla, Arduino and MIDI" href="#">
+									<img src="./assets/images/coupdefoudre.jpg" />
+								</a>
+							</li>
+							<li data-panel="panel-3">
 								<a class="caption" data-title="Leaplamp" data-description="Leap motion, Node.js and Arduino" href="#">
 									<img src="./assets/images/leap.jpg" />
 								</a>
@@ -56,7 +70,7 @@
 									<img src="./assets/images/taxiphone.jpg" />
 								</a>
 							</li>
-							<li data-panel="panel-3">
+							<li data-panel="panel-1">
 								<a class="caption" data-title="Minitel 2.0" data-description="Electronics, Raspberry Pi and Obsolescence" href="#">
 									<img src="./assets/images/minitel.jpg" />
 								</a>
@@ -77,18 +91,70 @@
 				</section>
 				<!-- Panel items for the works -->
 				<div class="bl-panel-items" id="bl-panel-work-items">
-					<div data-panel="panel-1">
+					<div data-panel="panel-5">
+						<div>
+							<h3>Mobiles Illégitimes</h3>
+							<p>
+								"Mobiles Illégitimes" is an interactive documentary, by <a href="http://etrangemiroir.org" target="_blank">Etrange Miroir</a>, about the conditions of women in migration. Behind each door of the four furnitures, you'll hear a testimony or an analysis by migrants and activists involved in the migration and feminism questions.
+							</p>
+							<p>
+								I designed and realised the technical part of it, leveraging sensors, wireless communication (XBee), and MIDI messaging. Each furniture relies on a Raspberry Pi triggering messages when a door is opened and sending it wirelessely to a main media center.
+							</p>
+							<p>
+								Source code is available here: <a href="https://github.com/xseignard/mobile" target="_blank">https://github.com/xseignard/mobile</a>
+							</p>
+							<a class="fancybox" rel="mobilesillegitimes" href="./assets/images/projects/mobilesillegitimes/mobilesillegitimes_1.jpg">
+								<img src="./assets/images/projects/mobilesillegitimes/mobilesillegitimes_1s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="mobilesillegitimes" href="./assets/images/projects/mobilesillegitimes/mobilesillegitimes_2.jpg">
+								<img src="./assets/images/projects/mobilesillegitimes/mobilesillegitimes_2s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="mobilesillegitimes" href="./assets/images/projects/mobilesillegitimes/mobilesillegitimes_3.jpg">
+								<img src="./assets/images/projects/mobilesillegitimes/mobilesillegitimes_3s.jpg" alt="" />
+							</a>
+							<footer>
+								Photos are credited to <a href="http://etrangemiroir.org" target="_blank">Etrange Miroir</a>
+							</footer>
+						</div>
+					</div>
+					<div data-panel="panel-4">
+						<div>
+							<h3>Coup de foudre</h3>
+							<p>
+								Tesla coils are fun! I had the chance to work with the <a href="https://www.facebook.com/coup.defoudre.716" target="_blank">Coup de foudre</a> company to provide a MIDI interface for their Tesla coil. During a one week residency at <a href="http://www.stereolux.org" target="_blank">Stereolux</a> we managed to control the Tesla coil with MIDI from Ableton Live.
+							</p>
+							<p>
+								We also started to work on creating an Android app to control the Tesla coil. We chose to use <a href="http://cordova.io" target="_blank">Cordova</a> so we had to develop our custom Cordova plugin to communicate from Android to Arduino, it's a work in progress and open source, so anyone can contribute!
+							</p>
+							<p>
+								Source code of the plugin is available here: <a href="https://github.com/stereolux/cordovarduino" target="_blank">https://github.com/stereolux/cordovarduino</a>
+							</p>
+							<a class="fancybox" rel="coupdefoudre" href="./assets/images/projects/coupdefoudre/coupdefoudre_1.jpg">
+								<img src="./assets/images/projects/coupdefoudre/coupdefoudre_1s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="coupdefoudre" href="./assets/images/projects/coupdefoudre/coupdefoudre_2.jpg">
+								<img src="./assets/images/projects/coupdefoudre/coupdefoudre_2s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="coupdefoudre" href="http://vimeo.com/80086541">
+								<img src="./assets/images/projects/coupdefoudre/coupdefoudre_3s.jpg" alt="" />
+							</a>
+							<footer>
+								Photos and video are credited to <a href="https://www.facebook.com/coup.defoudre.716" target="_blank">Coup de foudre</a>, <a href="http://www.flickr.com/photos/buskersbern/" target="_blank">Buskers Bern</a> and <a href="http://www.stereolux.org" target="_blank">Stereolux</a>
+							</footer>
+						</div>
+					</div>
+					<div data-panel="panel-3">
 						<div>
 							<h3>Leaplamp</h3>
 							<p>
-							The idea behind this work was to explore how to interface Arduino with Leapmotion, and to see what would be the precision we could get with some basic servos.<br/>
-							Since there is no lib to directly connect the Leapmotion to the Arduino, I used node.js to connect to the websocket server that streams the Leapmotion data and the johnny-five node.js lib to control the Arduino and the servos.<br/>
+								The idea behind this work was to explore how to interface Arduino with Leapmotion, and to see what would be the precision we could get with some basic servos.<br/>
+								Since there is no lib to directly connect the Leapmotion to the Arduino, I used node.js to connect to the websocket server that streams the Leapmotion data and the johnny-five node.js lib to control the Arduino and the servos.
 							</p>
 							<p>
 								This work has been featured on <a href="http://hackaday.com/2013/07/11/animating-a-lamp-with-the-leap-motion/" target="_blank">Hack a Day</a> and <a href="http://www.adafruit.com/blog/2013/07/11/leapmotion-controlled-lamp-with-arduino-and-node-js/" target="_blank">Adafruit blog</a>.
 							</p>
 							<p>
-							More info here: <a href="http://xseignard.github.io/2013/06/25/interfacing-leap-motion-with-arduino-thanks-to-nodejs/" target="_blank">Interfacing Leap Motion with Arduino thanks to Node.js</a>
+								More info here: <a href="http://xseignard.github.io/2013/06/25/interfacing-leap-motion-with-arduino-thanks-to-nodejs/" target="_blank">Interfacing Leap Motion with Arduino thanks to Node.js</a>
 							</p>
 							<a class="fancybox" rel="leaplamp" href="./assets/images/projects/leaplamp/leaplamp_1.jpg">
 								<img src="./assets/images/projects/leaplamp/leaplamp_1s.jpg" alt="" />
@@ -105,7 +171,7 @@
 						<div>
 							<h3>Taxiphone</h3>
 							<p>
-								"L'étrange taxiphone" is an interactive installation, made with the collective <a href="http://etrangemiroir.org" target="_blank">Etrange Miroir</a>, that questions the vision we have about immigrants. Relying on a scenography that represents a phone booth, the spectator compose a phone number and hears testimonials of migrants, speaking about how they are perceived by the society.
+								"L'étrange taxiphone" is an interactive documentary, made with the collective <a href="http://etrangemiroir.org" target="_blank">Etrange Miroir</a>, that questions the vision we have about immigrants. Relying on a scenography that represents a phone booth, the spectator compose a phone number and hears testimonials of migrants, speaking about how they are perceived by the society.
 							</p>
 							<p>
 								The rotary phones are Arduino controlled, and each composed phone number will be translated as a MIDI message and sent to Ableton Live to control the current played sound.
@@ -130,11 +196,21 @@
 							</a>
 						</div>
 					</div>
-					<div data-panel="panel-3">
+					<div data-panel="panel-1">
 						<div>
-							<img src="./assets/images/minitel.jpg" />
 							<h3>Minitel 2.0</h3>
-							<p>Blablabla.</p>
+							<p>
+								This project is about reusing a Minitel as the peripherals of a Raspberry Pi. It means adapting video signals and circuit bending to reuse the Minitel's keyboard. 
+							</p>
+							<p>
+								More info here: <a href="http://xseignard.github.io/2013/05/20/plug-your-minitel-on-your-raspberry-pi/" target="_blank">Plug your Minitel on your Raspberry Pi</a>
+							</p>
+							<a class="fancybox" rel="minitel20" href="./assets/images/projects/minitel20/minitel20_1.jpg">
+								<img src="./assets/images/projects/minitel20/minitel20_1s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="minitel20" href="./assets/images/projects/minitel20/minitel20_2.jpg">
+								<img src="./assets/images/projects/minitel20/minitel20_2s.jpg" alt="" />
+							</a>
 						</div>
 					</div>
 					<nav>
