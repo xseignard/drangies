@@ -1,5 +1,5 @@
 /**
- * drangies - v0.0.1 - 2014-01-10
+ * drangies - v0.0.1 - 2014-01-12
  * http://drangies.fr
  *
  * Copyright (c) 2014 Xavier Seignard <xavier.seignard@gmail.com>
