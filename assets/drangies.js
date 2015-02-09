@@ -44,6 +44,7 @@ var Boxlayout = (function() {
 		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
 		// support css transitions
 		supportTransitions = Modernizr.csstransitions;
+		console.log($closeWorkItem);
 
 	function init() {
 		initEvents();
