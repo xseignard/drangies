@@ -506,6 +506,11 @@ section.bl-expand .bl-icon-close {
 	height: 90%!important;
 }
 
+.cloe-panel {
+	margin: 20px;
+	float: right;
+}
+
 @media screen and (max-width: 46.5em) {
 	.bl-content,
 	.bl-box {
