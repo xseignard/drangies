@@ -52,6 +52,21 @@
 						<h2>I make stuff</h2>
 						<p>Here you can find some of my previous projects</p>
 						<ul id="bl-work-items">
+							<li data-panel="panel-10">
+								<a class="caption" data-title="Chromatic" data-description="Printers, Realtime and Useless Data" href="#">
+									<img src="./assets/images/chromatic.jpg" />
+								</a>
+							</li>
+							<li data-panel="panel-9">
+								<a class="caption" data-title="Dashboard" data-description="IOT, Big and Useless Data" href="#">
+									<img src="./assets/images/dashboard.jpg" />
+								</a>
+							</li>
+							<li data-panel="panel-8">
+								<a class="caption" data-title="Folie" data-description="Circus, theatre and LED displays" href="#">
+									<img src="./assets/images/folie.jpg" />
+								</a>
+							</li>
 							<li data-panel="panel-7">
 								<a class="caption" data-title="Dans l'oeil du cyclope" data-description="Arduino, JavaScript and Comics" href="#">
 									<img src="./assets/images/cyclope.jpg" />
@@ -103,6 +118,99 @@
 				</section>
 				<!-- Panel items for the works -->
 				<div class="bl-panel-items" id="bl-panel-work-items">
+					<div data-panel="panel-10">
+						<span class="bl-icon bl-icon-close close-panel"></span>
+						<div>
+							<h3>Dashboard @ Chromatic</h3>
+							<p>
+								With Sid Lee, we decided to transform the <a href="http://dashboard.sidlee.com" target="_blank">http://dashboard.sidlee.com</a> website into an artistic installation that would make people think about how they consume data and how this data often ends into a forgotten world. To emphasize the vacuity of collecting every data of everything, we plugged 10 thermal printers (often found at the checkout in stores) to the stream of data the sensors generated within Sid Lee Paris agency. The printers would print every vent that occured in the agency in real time. The bills that such printers produce always end up into a trash, so do most of the data we collect.
+							</p>
+							<p>
+								I was in charge of producing the creation, and I had to develop a specific software library to be able to turn these printers into IOT ready printers. The code of this library and the one of the installation are open source and can be found here:
+								<ul>
+									<li><a href="https://github.com/xseignard/thermalPrinter" target="_blank">https://github.com/xseignard/thermalPrinter</a></li>
+									<li><a href="https://github.com/xseignard/dashleePrinter" target="_blank">https://github.com/xseignard/dashleePrinter</a></li>
+								</ul>
+							</p>
+							<p>
+								This project was presented during the <a href="http://festivalchromatic.com/paris/portfolio_page/sid-lee-paris/" target="_blank">"Festival Chromatic"</a> in Paris at "La cité de la mode et du design"<br/>
+								It's worth mentionning this intersting analysis (in french) of the installation: <a href="http://www.theartchemists.com/festival-chromatic-focale-sur-les-donnees-perdues-de-lagence-sid-lee/" target="_blank">Festival Chromatic : focale sur les "données perdues" de l’agence Sid Lee</a>
+							</p>
+							<a class="fancybox" rel="chromatic" href="./assets/images/projects/chromatic/chromatic_1.jpg">
+								<img src="./assets/images/projects/chromatic/chromatic_1s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="chromatic" href="./assets/images/projects/chromatic/chromatic_4.jpg">
+								<img src="./assets/images/projects/chromatic/chromatic_4s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="chromatic" href="./assets/images/projects/chromatic/chromatic_5.jpg">
+								<img src="./assets/images/projects/chromatic/chromatic_5s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="chromatic" href="./assets/images/projects/chromatic/chromatic_6.jpg">
+								<img src="./assets/images/projects/chromatic/chromatic_6s.jpg" alt="" />
+							</a>
+						</div>
+					</div>
+					<div data-panel="panel-9">
+						<span class="bl-icon bl-icon-close close-panel"></span>
+						<div>
+							<h3>Dashboard @ Sid Lee</h3>
+							<p>
+								In celebration of its sixth anniversary, Sid Lee agency has tapped into the Internet of Things to track our infinitely quantifiable world using real-time data. To do so, the team had placed digital Arduino-embedded sensors throughout its Paris office to count everything that goes on, ranging from how many cups of coffee are poured in a day, to how many times the toilets flush, to how many times doors are opened, to how many steps are taken on the stairs, to how many liters of water are drunk, among countless other things.
+							</p>
+							<p>
+								I was in charge of hacking the furnitures to place various sensors, programming Arduinos and the Node.js server, deploying and scaling the application and some frontend programming.
+							</p>
+							<p>
+								You can visit the webiste here: <a href="http://dashboard.sidlee.com" target="_blank">http://dashboard.sidlee.com</a><br/>
+								The whole site (frontend, backend and arduino code) is open source and available here: <a href="https://github.com/SidLeeParis/sidLeeAgenceConnectee" target="_blank">https://github.com/SidLeeParis/sidLeeAgenceConnectee</a>
+							</p>
+							<p>
+								This project won various prizes and was mentionned in a lot of online press:
+								<ul>
+									<li>Winner of the <a href="http://www.thefwa.com/site/dashboard" target="_blank">"FWA Site of the Day"</a> prize.</li>
+									<li>Winner of the <a href="http://www.strategies.fr/grands-prix/286/grand-prix-strategies-de-la-publicite-2015/palmares/7/" target="_blank">"Grand Prix Stratégies de la Publicité 2015, catégorie Autopromotion"</a> prize.</li>
+									<li>Shortlisted for the <a href="http://www.canneslionsarchive.com/winners/entry/590858/dashboard" target="_blank">"Design award at Cannes Lions 2015"</a></li>
+									<li>Various articles on the online press (<a href="http://www.fastcodesign.com/3042652/this-french-creative-agency-counts-everything-it-does-in-its-office-everything" target="_blank">Fast Company Design</a>, <a href="http://hypebeast.com/2015/02/sid-lee-interactive-dashboard-counts-everything-done-in-the-office" target="_blank">Hype Beast</a>, <a href="http://blog.atmel.com/2015/03/02/this-french-agency-is-quantifying-everything-in-its-office/" target="_blank">Atmel</a>, etc.)</li>
+								</ul>
+							</p>
+							<a class="fancybox" rel="dashboard" href="./assets/images/projects/dashboard/dashboard_1.gif">
+								<img src="./assets/images/projects/dashboard/dashboard_1s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="dashboard" href="./assets/images/projects/dashboard/dashboard_2.gif">
+								<img src="./assets/images/projects/dashboard/dashboard_2s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="dashboard" href="https://www.youtube.com/watch?v=TioYIJhdaKo">
+								<img src="./assets/images/projects/dashboard/dashboard_3s.jpg" alt="" />
+							</a>
+						</div>
+					</div>
+					<div data-panel="panel-8">
+						<span class="bl-icon bl-icon-close close-panel"></span>
+						<div>
+							<h3>Folie</h3>
+							<p>
+								"Folie" is an hybrid piece, mixing circus, theatre, rave music and technolgy. A fantastic tale questionning the need of rituals, the modifications of the consciousness and how to master chaos. It has been shown in Nantes in november 2014. See <a href="http://sweat-lodge.jimdo.com/substancecirk/" target="_blank">Substance Cirk</a> for more informations.
+							</p>
+							<p>
+								I was in charge of creating 4 custom red LED displays, where the subtitles of the show would be shown. I leveraged PLC communications, Arduino and Node.js to remotely control them.
+							</p>
+							<a class="fancybox" rel="folie" href="./assets/images/projects/folie/folie_1.jpg">
+								<img src="./assets/images/projects/folie/folie_1s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="folie" href="./assets/images/projects/folie/folie_2.jpg">
+								<img src="./assets/images/projects/folie/folie_2s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="folie" href="./assets/images/projects/folie/folie_3.jpg">
+								<img src="./assets/images/projects/folie/folie_3s.jpg" alt="" />
+							</a>
+							<a class="fancybox" rel="folie" href="https://www.youtube.com/watch?v=XyqJO9w2b0M">
+								<img src="./assets/images/projects/folie/folie_4s.jpg" alt="" />
+							</a>
+							<footer>
+								Photos are credited to <a href="http://damienbossis.weebly.com/" target="_blank">Damien Bossis</a>
+							</footer>
+						</div>
+					</div>
 					<div data-panel="panel-7">
 						<span class="bl-icon bl-icon-close close-panel"></span>
 						<div>
@@ -171,7 +279,7 @@
 								I designed and realised the technical part of it, leveraging sensors, wireless communication (XBee), and MIDI messaging. Each furniture relies on a Raspberry Pi triggering messages when a door is opened and sending it wirelessely to a main media center.
 							</p>
 							<p>
-								Source code is available here: <a href="https://github.com/xseignard/mobile" target="_blank">https://github.com/xseignard/mobile</a>
+								Source code is available here: <a href="https://github.com/etrange-miroir/mobiles-illegitimes" target="_blank">https://github.com/etrange-miroir/mobiles-illegitimes</a>
 							</p>
 							<a class="fancybox" rel="mobilesillegitimes" href="./assets/images/projects/mobilesillegitimes/mobilesillegitimes_1.jpg">
 								<img src="./assets/images/projects/mobilesillegitimes/mobilesillegitimes_1s.jpg" alt="" />
@@ -201,7 +309,7 @@
 								We also started to work on creating an Android app to control the Tesla coil. We chose to use <a href="http://cordova.io" target="_blank">Cordova</a> so we had to develop our custom Cordova plugin to communicate from Android to Arduino, it's a work in progress and open source, so anyone can contribute!
 							</p>
 							<p>
-								Source code of the plugin is available here: <a href="https://github.com/stereolux/cordovarduino" target="_blank">https://github.com/stereolux/cordovarduino</a>
+								Source code of the plugin is available here: <a href="https://github.com/xseignard/cordovarduino" target="_blank">https://github.com/xseignard/cordovarduino</a>
 							</p>
 							<a class="fancybox" rel="coupdefoudre" href="./assets/images/projects/coupdefoudre/coupdefoudre_1.jpg">
 								<img src="./assets/images/projects/coupdefoudre/coupdefoudre_1s.jpg" alt="" />
@@ -253,7 +361,7 @@
 								The rotary phones are Arduino controlled, and each composed phone number will be translated as a MIDI message and sent to Ableton Live to control the current played sound.
 							</p>
 							<p>
-								Source code is available here: <a href="https://github.com/xseignard/taxiphone" target="_blank">https://github.com/xseignard/taxiphone</a>
+								Source code is available here: <a href="https://github.com/etrange-miroir/etrange-taxiphone" target="_blank">https://github.com/etrange-miroir/etrange-taxiphone</a>
 							</p>
 							<a class="fancybox" rel="taxiphone" href="./assets/images/projects/taxiphone/taxiphone_1.jpg">
 								<img src="./assets/images/projects/taxiphone/taxiphone_1s.jpg" alt="" />
