@@ -1,5 +1,5 @@
 /**
- * drangies - v0.0.1 - 2015-07-23
+ * drangies - v0.0.1 - 2015-07-24
  * http://drangies.fr
  *
  * Copyright (c) 2015 Xavier Seignard <xavier.seignard@gmail.com>
@@ -29,6 +29,7 @@ var Boxlayout = (function() {
 		totalWorkPanels = $workPanels.length,
 		// navigating the work panels
 		$nextWorkItem = $workPanelsContainer.find( 'nav > span.bl-next-work' ),
+		$previousWorkItem = $workPanelsContainer.find( 'nav > span.bl-prev-work' ),
 		// if currently navigating the work items
 		isAnimating = false,
 		// close work panel trigger
@@ -110,6 +111,35 @@ var Boxlayout = (function() {
 
 			var $currentPanel = $workPanels.eq( currentWorkPanel );
 			currentWorkPanel = currentWorkPanel < totalWorkPanels - 1 ? currentWorkPanel + 1 : 0;
+			var $nextPanel = $workPanels.eq( currentWorkPanel );
+
+			$currentPanel.removeClass( 'bl-show-work' ).addClass( 'bl-hide-current-work' ).on( transEndEventName, function( event ) {
+				if( !$( event.target ).is( 'div' ) ) return false;
+				$( this ).off( transEndEventName ).removeClass( 'bl-hide-current-work' );
+				isAnimating = false;
+			} );
+
+			if( !supportTransitions ) {
+				$currentPanel.removeClass( 'bl-hide-current-work' );
+				isAnimating = false;
+			}
+			
+			$nextPanel.addClass( 'bl-show-work' );
+
+			return false;
+
+		} );
+
+		// navigating the work items: current work panel scales down and the next work panel slides up
+		$previousWorkItem.on( 'click', function( event ) {
+			
+			if( isAnimating ) {
+				return false;
+			}
+			isAnimating = true;
+
+			var $currentPanel = $workPanels.eq( currentWorkPanel );
+			currentWorkPanel = currentWorkPanel === 0 ? totalWorkPanels - 1 : currentWorkPanel - 1;
 			var $nextPanel = $workPanels.eq( currentWorkPanel );
 
 			$currentPanel.removeClass( 'bl-show-work' ).addClass( 'bl-hide-current-work' ).on( transEndEventName, function( event ) {
