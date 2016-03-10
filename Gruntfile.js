@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     },
     // sources definition
     src: {
-      js: 'src/js/*.js', 
+      js: 'src/js/*.js',
       index: 'src/index.html',
       assets : 'src/assets',
       css: '<%= src.assets %>/css/',
@@ -92,7 +92,17 @@ module.exports = function(grunt) {
             expand: true,
             cwd: '.',
             src: ['CNAME'],
-            dest: '<%= distDir.path %>/'            
+            dest: '<%= distDir.path %>/'
+          }
+        ]
+      },
+      key: {
+        files: [
+          {
+            expand: true,
+            cwd: '.',
+            src: ['Xavier_Seignard_pub.asc'],
+            dest: '<%= distDir.path %>/'
           }
         ]
       },
@@ -102,7 +112,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'bower_components/fancybox/source',
             src: ['jquery.fancybox.css', 'fancybox_overlay.png', 'fancybox_sprite.png', 'fancybox_loading.gif', 'blank.gif', 'helpers/jquery.fancybox-media.js'],
-            dest: '<%= distDir.vendor %>'            
+            dest: '<%= distDir.vendor %>'
           }
         ]
       }
@@ -169,7 +179,7 @@ module.exports = function(grunt) {
 
   // https://gist.github.com/cobyism/4730490
   // http://www.dhar.fr/blog/2012/07/23/some-fun-with-git-hooks-and-grunt-dot-js/
-  
+
   // task to process src/index.html
   grunt.registerTask('index', 'Process index.html template', function () {
     grunt.file.copy('src/index.html', 'dist/index.html', { process: grunt.template.process });
