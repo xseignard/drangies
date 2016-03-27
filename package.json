@@ -13,7 +13,8 @@
     "url": "https://github.com/xseignard/drangies/issues"
   },
   "scripts": {
-    "build": "grunt prod-build"
+    "build": "grunt prod-build",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "express": "~3.3.5",
